@@ -12,6 +12,7 @@ from torch.utils.data import Dataset, TensorDataset, DataLoader
 from torchvision import transforms
 import copy
 from sklearn.model_selection import train_test_split
+from IPython import get_ipython
 
 
 # In[2]:
@@ -220,7 +221,6 @@ from trainer import fit
 import numpy as np
 cuda = torch.cuda.is_available()
 
-get_ipython().run_line_magic('matplotlib', 'inline')
 import matplotlib
 import matplotlib.pyplot as plt
 
@@ -538,13 +538,13 @@ log_interval = 50
 fit(online_train_loader, online_test_loader, model, loss_fn, optimizer, scheduler, n_epochs, cuda, log_interval, metrics=[AverageNonzeroTripletsMetric()])
 
 
-# In[135]:
+# In[150]:
 
 
 train_embeddings_otl, train_labels_otl = extract_embeddings(train_loader, model)
 plot_embeddings(train_embeddings_otl, train_labels_otl, pic_name = 'online_triplet_train')
 val_embeddings_otl, val_labels_otl = extract_embeddings(test_loader, model)
-plot_embeddings(val_embeddings_otl, val_labels_otl, pic_name = 'online_triplet_train')
+plot_embeddings(val_embeddings_otl, val_labels_otl, pic_name = 'online_triplet_val')
 
 
 # In[136]:
