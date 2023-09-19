@@ -15,4 +15,48 @@
   - *OnlineContrastiveLoss.vsdx*
   - *OnlineTripletLoss.vsdx*
   - *TripletLoss.vsdx*
-- **task_stepanov.ipynb** - решение задания по пункту 5.
+- **task_stepanov.py** - решение задания по пункту 5. Для разработки использовался Jupyter Notebook (task_stepanov.ipynb). Графики результатов сохраняются в "/pic_result"
+
+# Результаты
+
+Ниже приведены результаты работы скрипта по п.5
+
+## Baseline - classification
+
+Train:
+![](pic_result/baseline_train.png)
+
+Test:
+![](pic_result/baseline_val.png)
+
+## Siamese network
+
+Train:
+![](pic_result/siamese_train.png)
+
+Test:
+![](pic_result/siamese_val.png)
+
+## Triplet network
+
+Train:
+![](pic_result/triplet_train.png)
+
+Test:
+![](pic_result/triplet_val.png)
+
+## Online pair selection
+
+Train:
+![](pic_result/one_pair_train.png)
+
+Test:
+![](pic_result/one_pair_val.png)
+
+## Online triplet selection
+
+Train:
+![](pic_result/online_triplet_train.png)
+
+Test:
+![](pic_result/online_triplet_val.png)
